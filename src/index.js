@@ -1,8 +1,8 @@
 // @flow
-const sayHello = (name: string = 'Asshole') => {
-  return 'Hello, ' + name
+const readWord = (word: string): string => {
+  return ''
 }
 
 module.exports = {
-  sayHello
+  readWord
 }
