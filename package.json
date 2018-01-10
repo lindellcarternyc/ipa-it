@@ -1,0 +1,11 @@
+{
+  "name": "ipa-it",
+  "version": "0.0.1",
+  "description": "A small module for transcribing Italian to IPA",
+  "main": "index.js",
+  "author": "Lindell Carter",
+  "license": "MIT",
+  "devDependencies": {
+    "flow-bin": "^0.63.1"
+  }
+}
