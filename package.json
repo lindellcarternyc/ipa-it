@@ -6,6 +6,7 @@
   "author": "Lindell Carter",
   "license": "MIT",
   "devDependencies": {
-    "flow-bin": "^0.63.1"
+    "flow-bin": "^0.63.1",
+    "jest": "^22.0.5"
   }
 }
