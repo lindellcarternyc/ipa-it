@@ -48,4 +48,10 @@ describe('readLetter', () => {
       expect(read).toEqual(consonant)
     })
   })
+
+  it('should throw an error on other input', () => {
+    expect(() => {
+      readLetter('2')
+    }).toThrowError('2 is unrecognized')
+  })
 })
