@@ -11,6 +11,6 @@
   },
   "scripts": {
     "test": "jest",
-    "watch:tests": "jest --watch colors"
+    "watch:tests": "jest --watch --colors"
   }
 }
