@@ -3,7 +3,7 @@
 const Constants = require('./constants')
 const { readLetter } = require('./readletter')
 
-describe.only('readLetter', () => {
+describe('readLetter', () => {
   it('should accept a single char', () => {
     const read = readLetter('a')
     expect(() => { readLetter('a')}).not.toThrowError()
@@ -38,6 +38,14 @@ describe.only('readLetter', () => {
     it('should recognize the accented vowel: ' + accented_vowel, () => {
       const read = readLetter(accented_vowel)
       expect(read).toEqual(accented_vowel)
+    })
+  })
+
+  const consonants = 'bcdfghjklmnpqrstvwxyz'.split('')
+  consonants.forEach(consonant => {
+    it('should recognize the consonant: ' + consonant, () => {
+      const read = readLetter(consonant)
+      expect(read).toEqual(consonant)
     })
   })
 })
