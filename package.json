@@ -10,6 +10,7 @@
     "jest": "^22.0.5"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "watch:tests": "jest --watch colors"
   }
 }
