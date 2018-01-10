@@ -7,10 +7,16 @@
   "license": "MIT",
   "devDependencies": {
     "flow-bin": "^0.63.1",
-    "jest": "^22.0.5"
+    "jest": "^22.0.5",
+    "jest-flow-transform": "^1.0.1"
   },
   "scripts": {
     "test": "jest",
     "watch:tests": "jest --watch --colors"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "jest-flow-transform"
+    }
   }
 }
