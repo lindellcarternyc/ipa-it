@@ -1,6 +1,7 @@
 // @flow
 
 const { ACCENTED_VOWELS } = require('../constants')
+const { CONSONANT } = require('../models/consonants')
 
 const isVowel = (letter: string): boolean => {
   if ('aeiou'.split('').indexOf(letter) >= 0) {
@@ -12,6 +13,12 @@ const isVowel = (letter: string): boolean => {
   }
 }
 
+const isConsonant = (letter: string): boolean => {
+  const key = letter.toUpperCase()
+  return CONSONANT[key] !== undefined
+}
+
 module.exports = {
-  isVowel
+  isVowel,
+  isConsonant
 }
