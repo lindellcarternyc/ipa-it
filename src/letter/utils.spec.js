@@ -16,4 +16,12 @@ describe('Utils.isVowel method', () => {
       expect(actual).toBe(true)
     })
   })
+
+  const testConsonants = 'bdcfgh'.split('')
+  testConsonants.forEach(consonant => {
+    it('should return false for consonant ' + consonant, () => {
+      const isVowel = Utils.isVowel(consonant)
+      expect(isVowel).toBe(false)
+    })
+  })
 })
