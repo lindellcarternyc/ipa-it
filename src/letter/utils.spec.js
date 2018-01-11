@@ -25,10 +25,16 @@ describe('Utils.isVowel method', () => {
     })
   })
 
-  it.only('should reject empty strings', () => {
+  it('should reject empty strings', () => {
     expect(() => {
       Utils.isVowel('')
     }).toThrowError('A Letter must have a length of exactly 1, not 0')
+  })
+
+  it('should reject strings that are longer than 1 character', () => {
+    expect(() => {
+      Utils.isVowel('aaa')
+    }).toThrowError('A Letter must have a length of exactly 1, not 3')
   })
 })
 
