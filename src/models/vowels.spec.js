@@ -1,14 +1,22 @@
-const Constants = require('../constants')
-const { VOWEL } = require('./vowels')
+const { ACCENTED_VOWELS } = require('../constants')
+const { VOWEL, isVowel } = require('./vowels')
 
 describe('Vowel', () => {
   const expected_vowels = [
     'a', 'e', 'i', 'o', 'u', 
-    Constants.A_GRAVE, Constants.E_GRAVE, Constants.I_GRAVE,
-    Constants.O_GRAVE, Constants.U_GRAVE, Constants.E_ACUTE
+    ...ACCENTED_VOWELS
   ]
   it('should define 11 vowels [a e i o u] ', () => {
     const actual_vowels = Object.keys(VOWEL).map(key => VOWEL[key])
     expect(actual_vowels).toEqual(expected_vowels)
+  })
+})
+
+describe('isVowel function', () => {
+  const regularVowels = 'aeiou'.split('')
+  regularVowels.forEach(v => {
+    it('should recognize ' + v + ' as a vowel', () => {
+      expect(isVowel(v)).toBe(true)
+    })
   })
 })
