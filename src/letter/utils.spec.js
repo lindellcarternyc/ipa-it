@@ -44,4 +44,19 @@ describe('Utils.isConsonant method', () => {
     const isConsonant = Utils.isConsonant(c)
     expect(isConsonant).toBe(true)
   })
+
+  const empty = ''
+  const tooLong = 'fgh'
+
+  it('should reject an empty string', () => {
+    expect(() => {
+      Utils.isConsonant(empty)
+    }).toThrowError('A Letter must have a length of exactly 1, not 0')
+  })
+
+  it('should reject a string longer that one character', () => {
+    expect(() => {
+      Utils.isConsonant(tooLong)
+    }).toThrowError('A Letter must have a length of exactly 1, not ' + tooLong.length)
+  })
 })
