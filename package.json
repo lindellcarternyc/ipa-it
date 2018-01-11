@@ -11,7 +11,7 @@
     "jest-flow-transform": "^1.0.1"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "watch:tests": "jest --watch --colors"
   },
   "jest": {
