@@ -15,6 +15,10 @@ const VOWEL = {
   E_ACCENT_ACUTE: 'é'
 }
 
+const isVowel = (letter: string): string => {
+  return VOWEL[letter.toUpperCase()] !== undefined
+}
+
 module.exports = {
-  VOWEL
+  VOWEL, isVowel
 }
