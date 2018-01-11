@@ -25,3 +25,11 @@ describe('Utils.isVowel method', () => {
     })
   })
 })
+
+describe('Utils.isConsonant method', () => {
+  const consonants = 'bcdfghjklmnpqrstvwxyz'.split('')
+  consonants.forEach(c => {
+    const isConsonant = Utils.isConsonant(c)
+    expect(isConsonant).toBe(true)
+  })
+})
