@@ -24,6 +24,12 @@ describe('Utils.isVowel method', () => {
       expect(isVowel).toBe(false)
     })
   })
+
+  it.only('should reject empty strings', () => {
+    expect(() => {
+      Utils.isVowel('')
+    }).toThrowError('A Letter must have a length of exactly 1, not 0')
+  })
 })
 
 describe('Utils.isConsonant method', () => {
