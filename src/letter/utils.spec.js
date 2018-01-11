@@ -1,4 +1,5 @@
 const Utils = require('./utils')
+const { ACCENTED_VOWELS } = require('../constants')
 
 describe('Utils.isVowel method', () => {
   const regular_vowels = ['a', 'e', 'i', 'o', 'u']
@@ -6,6 +7,13 @@ describe('Utils.isVowel method', () => {
     it('should recognize ' + vowel + ' as a vowel', () => {
       const isVowel = Utils.isVowel(vowel)
       expect(isVowel).toBe(true)
+    })
+  })
+
+  ACCENTED_VOWELS.forEach(accentedVowel => {
+    it('should recognize ' + accentedVowel + ' as a vowel', () => {
+      const actual = Utils.isVowel(accentedVowel)
+      expect(actual).toBe(true)
     })
   })
 })
