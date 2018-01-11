@@ -10,8 +10,6 @@ const isVowel = (letter: string): boolean => {
   } else {
     return false
   }
-  // return 'aeiou'.split('').indexOf(letter) >= 0 || 
-  //         ACCENTED_VOWELS.indexOf(letter) >= 0 
 }
 
 module.exports = {
